@@ -34,7 +34,7 @@ export default function Component() {
               className="dark:invert"
               src="https://nextjs.org/icons/vercel.svg"
               alt="Vercel logomark"
-              width={20}
+              width={25}
               height={20}
             />
             Deploy now
