@@ -234,7 +234,9 @@ Cookies.remove('jwt_token');
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
 
-
+<p>
+i didn't try to kill you
+</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
