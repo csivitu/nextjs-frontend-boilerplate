@@ -234,9 +234,7 @@ Cookies.remove('jwt_token');
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
 
-<p>
-This is a learning simple pull request
-</p>
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
