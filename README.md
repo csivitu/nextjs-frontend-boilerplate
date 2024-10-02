@@ -41,7 +41,7 @@
 All frontend projects under **csivitu** org must be a **fork** of this repository, changes can be made as per the project specific requirements but the overall rules and regulations must be followed as mentioned in this repository 
 
 ## Commits
-1.Commits must be made not fir every minor changes but a group of changes must be batched togeteher and committed to the repo at once, same goes for sending a PR to the main upstream repository or the main branch from any other branch.
+1.Commits must be made not fir every minor changes but a group of changes must be batched together and committed to the repo at once, same goes for sending a PR to the main upstream repository or the main branch from any other branch.
 2.Commit messages must follow standard pracices, eg: using prefixes for commit messages
 
 ## Examples
