@@ -1,0 +1,1 @@
+echo '🐶 Formatting and testing project before committing...' && bun run lint && git add .
