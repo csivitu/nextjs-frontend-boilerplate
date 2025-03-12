@@ -1,4 +1,7 @@
-[![csivit][csivitu-shield]][csivitu-url]
+<!-- Shields.io badges, don't change manually -->
+![CSIVITU](https://img.shields.io/badge/csivitu-csivitu-orange?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/csivitu/CSIWebsite2\.0?style=flat-square&color=blue)
+![GitHub issues](https://img.shields.io/github/issues/csivitu/CSIWebsite2\.0?style=flat-square&color=green)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -38,7 +41,7 @@
 
 
 ## Usage
-All frontend projects under **csivitu** org must be a **fork** of this repository, changes can be made as per the project specific requirements but the overall rules and regulations must be followed as mentioned in this repository 
+All frontend projects under **csivitu** org must be a **fork** of this repository, changes can be made as per the project specific requirements but the overall rules and regulations must be followed as mentioned in this repository
 
 ## Commits
 1.Commits must be made not fir every minor changes but a group of changes must be batched togeteher and committed to the repo at once, same goes for sending a PR to the main upstream repository or the main branch from any other branch.
@@ -47,7 +50,7 @@ All frontend projects under **csivitu** org must be a **fork** of this repositor
 ## Examples
 ### 1. **Type-Based Prefixes**
    These describe the type of change made to the codebase:
-   
+
    - **feat**: A new feature or functionality.
      - Example: `feat: add user login functionality`
    - **fix**: A bug fix.
@@ -73,7 +76,7 @@ All frontend projects under **csivitu** org must be a **fork** of this repositor
 
 ### 2. **Scope-Based Prefixes**
    These specify the area of the project being affected (optional but helpful):
-   
+
    - **feat(auth)**: If the feature is related to authentication.
      - Example: `feat(auth): add OAuth2.0 authentication`
    - **fix(api)**: If the fix applies to API-related code.
@@ -83,7 +86,7 @@ All frontend projects under **csivitu** org must be a **fork** of this repositor
 
 ### 3. **Semantic Commit Prefixes (Conventional Commits)**
    The Conventional Commits specification standardizes commit messages with prefixes and is often used with tools like `semantic-release` to automate versioning:
-   
+
    - **BREAKING CHANGE**: This prefix indicates that the commit introduces a breaking API change.
      - Example: `feat!: change authentication method to token-based (BREAKING CHANGE)`
    - **build(deps)**: If you update or install new dependencies.
@@ -121,8 +124,8 @@ extend: {
 ```
 
 ## Folders
-1.Adhere to the folder structure defined in the boilderplate, segregate similar files/ assets into same directory for better readablity of code. 
-2.All files must be small case(first word) especially the route/ pages files. 
+1.Adhere to the folder structure defined in the boilderplate, segregate similar files/ assets into same directory for better readablity of code.
+2.All files must be small case(first word) especially the route/ pages files.
 3.In react, every component must have it's first letter capitalised to avoid errors
 4.Unimportant or non necessary folders/files (locally required files) must be mentioned appropriately in the .gitignore file.
 5.Again, ensure tailwind config is updated for any folder structure changes.
@@ -172,7 +175,7 @@ export const getServerSideProps = async () => {
    Static or Non-Critical Data: If the data doesn’t need to be fetched before the page renders (e.g., less critical or optional data like paginated comments, client-specific data).
    Dynamic or User-Driven Events: When data should be fetched based on user interactions, such as button clicks or scroll events.
    Lighter Initial Load: When you want the page to load quickly and fetch data later.
-   
+
 ```bash
 import { useState, useEffect } from 'react';
 const Page = () => {
@@ -182,7 +185,7 @@ const Page = () => {
     async function fetchData() {
       try {
         const res = await fetch('https://api.example.com/data');
-        
+
         // Check if the response is OK
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -203,7 +206,7 @@ const Page = () => {
 };
 export default Page;
 ```
-   
+
 ## Cookies
 Use Secure and SameSite: Always use the secure option (only for HTTPS sites) and set SameSite to strict or lax to mitigate CSRF attacks.
 Consider HttpOnly for Server-Side Cookies: If you're setting cookies on the server (via HTTP headers), use the HttpOnly flag to make them inaccessible to JavaScript, protecting against XSS.
@@ -221,7 +224,7 @@ Example code:
 ```bash
 import Cookies from 'js-cookie';
 Cookies.set('jwt_token', 'your-jwt-token', {
-  expires: 1, // expires in 1 day, set this is per the backend 
+  expires: 1, // expires in 1 day, set this is per the backend
   secure: true, // only over HTTPS
   sameSite: 'Strict', // protect against CSRF
 });
