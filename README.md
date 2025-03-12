@@ -1,7 +1,7 @@
-<!-- Shields.io badges, don't change manually -->
+<!-- Shields.io badges, CHANGE project name in badges!!! -->
 ![CSIVITU](https://img.shields.io/badge/csivitu-csivitu-orange?style=flat-square)
-![GitHub contributors](https://img.shields.io/github/contributors/csivitu/CSIWebsite2\.0?style=flat-square&color=blue)
-![GitHub issues](https://img.shields.io/github/issues/csivitu/CSIWebsite2\.0?style=flat-square&color=green)
+![GitHub contributors](https://img.shields.io/github/contributors/csivitu/nextjs-frontend-boilerplate?style=flat-square&color=blue)
+![GitHub issues](https://img.shields.io/github/issues/csivitu/nextjs-frontend-boilerplate?style=flat-square&color=green)
 
 <!-- PROJECT LOGO -->
 <br />
