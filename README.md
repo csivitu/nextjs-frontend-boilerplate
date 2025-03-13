@@ -1,4 +1,7 @@
-[![csivit][csivitu-shield]][csivitu-url]
+<!-- Shields.io badges, CHANGE project name in badges!!! -->
+![CSIVITU](https://img.shields.io/badge/csivitu-csivitu-orange?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/csivitu/nextjs-frontend-boilerplate?style=flat-square&color=blue)
+![GitHub issues](https://img.shields.io/github/issues/csivitu/nextjs-frontend-boilerplate?style=flat-square&color=green)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -38,16 +41,17 @@
 
 
 ## Usage
-All frontend projects under **csivitu** org must be a **fork** of this repository, changes can be made as per the project specific requirements but the overall rules and regulations must be followed as mentioned in this repository 
+All frontend projects under **csivitu** must be a **fork** of this repository, changes can be made as per the project specific requirements but the overall rules and regulations must be followed as mentioned under this repository.
 
 ## Commits
-1.Commits must be made not fir every minor changes but a group of changes must be batched togeteher and committed to the repo at once, same goes for sending a PR to the main upstream repository or the main branch from any other branch.
-2.Commit messages must follow standard pracices, eg: using prefixes for commit messages
+1. Commits must be made not for every minor changes but a group of changes must be clubbed together and committed to the repo at once, same goes for sending a PR to the main upstream repository or the main branch from any other branch.
+
+2. Commit messages must follow standard practices as specified by [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) and always include the appropriate prefixes such as `feat`, `fix` & `chore`.
 
 ## Examples
 ### 1. **Type-Based Prefixes**
    These describe the type of change made to the codebase:
-   
+
    - **feat**: A new feature or functionality.
      - Example: `feat: add user login functionality`
    - **fix**: A bug fix.
@@ -73,7 +77,7 @@ All frontend projects under **csivitu** org must be a **fork** of this repositor
 
 ### 2. **Scope-Based Prefixes**
    These specify the area of the project being affected (optional but helpful):
-   
+
    - **feat(auth)**: If the feature is related to authentication.
      - Example: `feat(auth): add OAuth2.0 authentication`
    - **fix(api)**: If the fix applies to API-related code.
@@ -81,9 +85,9 @@ All frontend projects under **csivitu** org must be a **fork** of this repositor
    - **docs(ui)**: If the documentation is for UI components.
      - Example: `docs(ui): update button component usage`
 
-### 3. **Semantic Commit Prefixes (Conventional Commits)**
+### 3. **Semantic Commit Prefixes**
    The Conventional Commits specification standardizes commit messages with prefixes and is often used with tools like `semantic-release` to automate versioning:
-   
+
    - **BREAKING CHANGE**: This prefix indicates that the commit introduces a breaking API change.
      - Example: `feat!: change authentication method to token-based (BREAKING CHANGE)`
    - **build(deps)**: If you update or install new dependencies.
@@ -95,13 +99,18 @@ All frontend projects under **csivitu** org must be a **fork** of this repositor
 - `chore: remove deprecated package`
 
 ## TailwindCSS
-The tailwind.config.ts is a TypeScript configuration file used in Tailwind CSS projects to customize various aspects of Tailwind's default configuration. It allows you to define custom themes, extend or override existing styles, and configure plugins, among other things.
-Things to consider:
-1.For errors like CSS not being applied to some pages but working on other pages, make sure to check the content object inside the tailwind.config property accordingly
-2. Adhere to the same breakpoints for the entierity of the project to ensure that responsivity failures do not arise.
-3, For using custom fonts, make sure there is a font-face directive defined in the globals.css file and correctly defined in the tailwindconfig file as well
-Sample:
-in globals.css
+The `tailwind.config.ts` is a TypeScript configuration file used in TailwindCSS projects to customize various aspects of Tailwind's default configuration. It allows you to define custom themes, extend or override existing styles, and configure plugins, among other things.
+
+**Things to consider:**
+
+1. For errors like CSS not being applied to some pages but working on other pages, make sure to check the content object inside the tailwind.config.ts property accordingly.
+
+2. Adhere to the same breakpoints for the entirety of the project to ensure that responsivity bugs do not arise.
+3. For using custom fonts, make sure there is a font-face directive defined in the globals.css file and correctly defined in the tailwind.config.ts file.
+
+**Sample:**
+
+globals.css
 ```bash
 @font-face {
   font-family: 'Alegreya';
@@ -110,7 +119,10 @@ in globals.css
   font-style: normal;
 }
 ```
-in tailwind config
+
+<br/>
+
+tailwind.config.ts
 ```bash
 extend: {
       fontFamily: {
@@ -121,15 +133,16 @@ extend: {
 ```
 
 ## Folders
-1.Adhere to the folder structure defined in the boilderplate, segregate similar files/ assets into same directory for better readablity of code. 
-2.All files must be small case(first word) especially the route/ pages files. 
-3.In react, every component must have it's first letter capitalised to avoid errors
-4.Unimportant or non necessary folders/files (locally required files) must be mentioned appropriately in the .gitignore file.
-5.Again, ensure tailwind config is updated for any folder structure changes.
+1. Adhere to the folder structure defined in the boilerplate, segregate similar files / assets into same directory for better readablity of code.
+2. All filenames must begin with lowercase letters, especially the `route/` pages.
+3. In react, every component name must begin with an Uppercase letter to avoid errors.
+4. Unimportant and unnecessary folders/files (locally required files) must be mentioned appropriately in the `.gitignore` file.
+5. Ensure tailwind.config.ts is updated at all times for any folder structure changes.
 
 ## Types
-All custom user types that are non-primitive must be defined in a seperate folder in the **src** folder called **types** which contains necessary files for all the user defined types used in the project.
-Eg:
+All custom user types that are non-primitive must be defined in a separate folder in the **src**, called **types**, which contains necessary files for all the user defined types used in the project.
+
+Example:
 ```bash
 interface User {
   name: string;
@@ -145,18 +158,18 @@ type User = {
 ```
 
 ## Integration
-1.All the response data must be stored as in varaibles of their respective types/interfaces, all the netowrk requests must be handled for runtime-errors using try/catch and finally blocks.
-2.The state of each netowkr request must be stored in a state and that state must be updated depending on the response.status recieved from the API.
-3. Loadiing states and error message states must be used to handle loading phases and error messages (if any, after the request is completed successfully)
-3. For polling based requests, a maximum upper limit must be set after which the polling must cease and an appropriate error message me set
+1. All the response data must be stored as in variables of their respective types / interfaces, all the network requests must be handled for runtime-errors using try / catch / finally blocks.
+2. The state of each network request must be stored in a state and that state must be updated depending on the response.status received from the API.
+3. Loading states and error message states must be used to handle loading phases and error messages respectively (if any, after the request is completed successfully).
+3. For polling-based requests, a maximum upper limit must be set after which the polling must cease, and an appropriate error message must then be set.
 
 There are different ways to fetch data:
 
 1. getServerSideProps:
-  Server-Side Data Fetching: Use getServerSideProps when you need to fetch data on the server side before rendering the page.
-  Real-Time Data: Use it when the data should be fetched on every request (e.g., real-time data, personalized content, or ensuring data is always fresh).
-  SEO Considerations: When you need the data to be available for search engines (since the data is pre-rendered).
-  Sensitive Data: If you're fetching sensitive data (e.g., authentication tokens, database queries), which should not be exposed to the client.
+  - Server-Side Data Fetching: Use getServerSideProps when you need to fetch data on the server side before rendering the page.
+  - Real-Time Data: Use it when the data should be fetched on every request (e.g., real-time data, personalized content, or ensuring data is always fresh).
+  - SEO Considerations: When you need the data to be available for search engines (since the data is pre-rendered).
+  - Sensitive Data: If you're fetching sensitive data (e.g., authentication tokens, database queries), which should not be exposed to the client.
 
 ```bash
 export const getServerSideProps = async () => {
@@ -165,14 +178,16 @@ export const getServerSideProps = async () => {
 
   return { props: { data } };
 };
-
 ```
+
+<br/>
+
 2. useEffect:
-   Client-Side Data Fetching: Use useEffect when the data can be fetched after the page has been rendered on the client side.
-   Static or Non-Critical Data: If the data doesn’t need to be fetched before the page renders (e.g., less critical or optional data like paginated comments, client-specific data).
-   Dynamic or User-Driven Events: When data should be fetched based on user interactions, such as button clicks or scroll events.
-   Lighter Initial Load: When you want the page to load quickly and fetch data later.
-   
+  - Client-Side Data Fetching: Use useEffect when the data can be fetched after the page has been rendered on the client side.
+  - Static or Non-Critical Data: If the data doesn’t need to be fetched before the page renders (e.g., less critical or optional data like paginated comments, client-specific data).
+  - Dynamic or User-Driven Events: When data should be fetched based on user interactions, such as button clicks or scroll events.
+  - Lighter Initial Load: When you want the page to load quickly and fetch data later.
+
 ```bash
 import { useState, useEffect } from 'react';
 const Page = () => {
@@ -182,7 +197,7 @@ const Page = () => {
     async function fetchData() {
       try {
         const res = await fetch('https://api.example.com/data');
-        
+
         // Check if the response is OK
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -203,25 +218,26 @@ const Page = () => {
 };
 export default Page;
 ```
-   
+
 ## Cookies
 Use Secure and SameSite: Always use the secure option (only for HTTPS sites) and set SameSite to strict or lax to mitigate CSRF attacks.
+
 Consider HttpOnly for Server-Side Cookies: If you're setting cookies on the server (via HTTP headers), use the HttpOnly flag to make them inaccessible to JavaScript, protecting against XSS.
 
-expires: Defines how long the cookie will be valid. In this case, it's set to 7 days.
-secure: Ensures the cookie is only sent over HTTPS, improving security on production environments.
-sameSite: Restricts the cookie from being sent with cross-origin requests, protecting against CSRF attacks. Possible values are strict, lax, or none.
-path: Defines the URL path the cookie is valid for. Setting it to / makes the cookie accessible across the entire site.
+- `expires`: Defines how long the cookie will be valid. In this case, it's set to 7 days.
+- `secure`: Ensures the cookie is only sent over HTTPS, improving security on production environments.
+- `sameSite`: Restricts the cookie from being sent with cross-origin requests, protecting against CSRF attacks. Possible values are strict, lax, or none.
+- `path`: Defines the URL path the cookie is valid for. Setting it to / makes the cookie accessible across the entire site.
 
 First, install the js-cookie package:
 ```bash
 npm install js-cookie
 ```
-Example code:
+Example:
 ```bash
 import Cookies from 'js-cookie';
 Cookies.set('jwt_token', 'your-jwt-token', {
-  expires: 1, // expires in 1 day, set this is per the backend 
+  expires: 1, // expires in 1 day, set this is per the backend
   secure: true, // only over HTTPS
   sameSite: 'Strict', // protect against CSRF
 });
