@@ -1,0 +1,12 @@
+#!/bin/sh
+if ! head -1 "$1" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert|merge|Merge)(\(.+?\))?: .{1,}$"; then
+    echo "Aborting commit. Your commit message is invalid." >&2
+    echo "💡 Refer https://www.conventionalcommits.org/en/v1.0.0/ for details."
+    echo ""
+    exit 1
+fi
+if ! head -1 "$1" | grep -qE "^.{1,88}$"; then
+    echo "Aborting commit. Your commit message is too long." >&2
+    echo ""
+    exit 1
+fi
