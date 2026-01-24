@@ -4,14 +4,8 @@ import { Noto_Sans } from "next/font/google"
 import "./globals.css";
 
 const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
+	src: "./fonts/geist-vf.ttf",
 	variable: "--font-geist-sans",
-	weight: "100 900",
-});
-
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
 	weight: "100 900",
 });
 
@@ -33,7 +27,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${notoSans.variable} antialiased`}
+				className={`${geistSans.variable} ${notoSans.variable} antialiased`}
 			>
 				{children}
 			</body>
